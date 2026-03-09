@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "bta_autostack",
+	"version": "${version}",
+	"name": "Better with Autostack",
+	"description": "Press Shift+Middle click to autostack items in chests.",
+	"authors": [
+		"Neuromuser"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"icon": "icon.png",
+	"license": "CC0-1.0",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"neuromuser.bta_autostack.BTAutostack"
+		],
+		"beforeGameStart": [
+			"neuromuser.bta_autostack.BTAutostack"
+		],
+		"afterGameStart": [
+			"neuromuser.bta_autostack.BTAutostack"
+		],
+		"recipesReady": [
+			"neuromuser.bta_autostack.BTAutostack"
+		]
+	},
+	"mixins": [
+		"bta_autostack.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=${fabricloader}",
+		"halplibe": ">=${halplibe}",
+		"minecraft": "*",
+		"java": ">=${java}"
+	},
+	"suggests": {
+		"modmenu": ">=${modmenu}"
+	}
+}
