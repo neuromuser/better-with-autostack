@@ -42,7 +42,7 @@ public abstract class ScreenContainerAbstractMixin {
 				boolean itemsMoved = false;
 
 				for (int i = 0; i < inventorySlots.slots.size(); i++) {
-					Slot playerSlot = (Slot) inventorySlots.slots.get(i);
+					Slot playerSlot = inventorySlots.slots.get(i);
 
 					if (playerSlot.getContainer() != targetInventory && playerSlot.hasItem()) {
 						ItemStack playerStack = playerSlot.getItemStack();
@@ -56,7 +56,7 @@ public abstract class ScreenContainerAbstractMixin {
 
 						boolean chestHasItem = false;
 						for (int j = 0; j < inventorySlots.slots.size(); j++) {
-							Slot chestSlot = (Slot) inventorySlots.slots.get(j);
+							Slot chestSlot = inventorySlots.slots.get(j);
 							if (chestSlot.getContainer() == targetInventory && chestSlot.hasItem()) {
 								if (Objects.requireNonNull(chestSlot.getItemStack()).itemID == playerStack.itemID) {
 									chestHasItem = true;
